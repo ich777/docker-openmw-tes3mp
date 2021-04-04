@@ -1,7 +1,4 @@
 #!/bin/bash
-echo "---Container under construction, sleep zZzZz---"
-sleep infinity
-
 LAT_V="$(wget -qO- https://api.github.com/repos/TES3MP/openmw-tes3mp/releases | jq -r '.[0].tag_name')"
 CUR_V="$(ls -l ${DATA_DIR}/openmwtes3mp-* 2>/dev/null | awk '{print $9}' | cut -d '-' -f2-)"
 
