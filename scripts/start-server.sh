@@ -73,5 +73,5 @@ chmod -R ${DATA_PERM} ${DATA_DIR}
 
 echo "---Starting Server---"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${DATA_DIR}/TES3MP-Server/lib
-cd ${DATA_DIR}
+cd ${DATA_DIR}/TES3MP-Server
 ${DATA_DIR}/TES3MP-Server/tes3mp-server.x86_64
