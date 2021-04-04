@@ -6,7 +6,7 @@ LABEL maintainer="admin@minenet.at"
 #	apt-get -y install --no-install-recommends curl screen && \
 #	rm -rf /var/lib/apt/lists/*
 
-ENV DATA_DIR=/mindustry
+ENV DATA_DIR=/openmw
 ENV GAME_V="latest"
 ENV SRV_NAME="Docker OpenMW"
 ENV GAME_PARAMS=""
