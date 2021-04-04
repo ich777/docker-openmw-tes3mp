@@ -2,8 +2,12 @@ FROM ich777/debian-baseimage
 
 LABEL maintainer="admin@minenet.at"
 
+COPY cjson.tar.gz /tmp/
+
 RUN apt-get update && \
-	apt-get -y install --no-install-recommends libluajit-5.1-2 libgl1 jq && \
+	apt-get -y install --no-install-recommends libluajit-5.1-2 libgl1 lua-cjson jq && \
+	tar -C / -xvf /tmp/cjson.tar.gz && \
+	rm -rf /tmp/cjson.tar.gz && \
 	rm -rf /var/lib/apt/lists/*
 
 ENV DATA_DIR=/openmw
