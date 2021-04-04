@@ -8,7 +8,7 @@ LABEL maintainer="admin@minenet.at"
 
 ENV DATA_DIR=/mindustry
 ENV GAME_V="latest"
-ENV SRV_NAME="Docker openmw"
+ENV SRV_NAME="Docker OpenMW"
 ENV GAME_PARAMS=""
 ENV UMASK=000
 ENV UID=99
