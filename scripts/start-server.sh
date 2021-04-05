@@ -66,6 +66,10 @@ elif [ "$CUR_V" == "$GAME_V" ]; then
 fi
 
 echo "---Preparing Server---"
+if [ "$(cat ${DATA_DIR}/TES3MP-Server/tes3mp-server-default.cfg | grep "hostname = My TES3MP server")" ]; then
+    sed -i '/hostname = My TES3MP server/c\hostname = TES3MP Docker Server\' ${DATA_DIR}/TES3MP-Server/tes3mp-server-default.cfg
+    sed -i '/password =/c\password = Docker\' ${DATA_DIR}/TES3MP-Server/tes3mp-server-default.cfg
+fi
 chmod -R ${DATA_PERM} ${DATA_DIR}
 
 echo "---Starting Server---"
