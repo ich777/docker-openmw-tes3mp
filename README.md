@@ -18,7 +18,7 @@ Also visit the Homepage of the creator and consider Donating: https://tes3mp.com
 | UID | User Identifier | 99 |
 | GID | Group Identifier | 100 |
 | UMASK | Umask value | 0000 |
-| DATA_PERM | Data permissions for /chrome folder | 770 |
+| DATA_PERM | Data permissions for /openmw folder | 770 |
 
 ## Run example
 ```
