@@ -24,7 +24,7 @@ Also visit the Homepage of the creator and consider Donating: https://tes3mp.com
 ```
 docker run --name OpenMW-TES3MP -d \
 	-p 25565:25565/tcp \
-	-p 25565:25565/udp
+	-p 25565:25565/udp \
 	--env 'GAME_V=latest' \
 	--env 'UID=99' \
 	--env 'GID=100' \
