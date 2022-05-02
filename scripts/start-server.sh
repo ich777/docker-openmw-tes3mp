@@ -1,5 +1,5 @@
 #!/bin/bash
-LAT_V="$(wget -qO- https://api.github.com/repos/TES3MP/openmw-tes3mp/releases | jq -r '.[0].tag_name')"
+LAT_V="$(wget -qO- https://api.github.com/repos/TES3MP/openmw-tes3mp/releases | jq -r '.[].tag_name' | sed '/^[0-9]/d' | sort -V | grep -v "vr" | tail -1)"
 CUR_V="$(ls -l ${DATA_DIR}/openmwtes3mp-* 2>/dev/null | awk '{print $9}' | cut -d '-' -f2-)"
 
 if [ -z $LAT_V ]; then
